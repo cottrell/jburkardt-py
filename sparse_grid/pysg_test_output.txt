@@ -1,59 +1,33 @@
-..
+EE
+======================================================================
+ERROR: testSGNoBound2D (__main__.testFunctest)
 ----------------------------------------------------------------------
-Ran 2 tests in 0.016s
+Traceback (most recent call last):
+  File "pysg_test.py", line 65, in testSGNoBound2D
+    sg.generatePoints()
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 124, in generatePoints
+    self.gP[tuple(self.indices[i])] = gridPoint(self.indices[i], self.domain)
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 26, in __init__
+    self.pos = self.pointPosition(index, domain)
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 34, in pointPosition
+    for i in range(len(index) / 2):
+TypeError: 'float' object cannot be interpreted as an integer
 
-OK
+======================================================================
+ERROR: testSGNoBound3D (__main__.testFunctest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "pysg_test.py", line 22, in testSGNoBound3D
+    sg.generatePoints()
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 124, in generatePoints
+    self.gP[tuple(self.indices[i])] = gridPoint(self.indices[i], self.domain)
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 26, in __init__
+    self.pos = self.pointPosition(index, domain)
+  File "/home/cottrell/dev/jburkardt-py/sparse_grid/pysg.py", line 34, in pointPosition
+    for i in range(len(index) / 2):
+TypeError: 'float' object cannot be interpreted as an integer
 
-Coordinates of points in 2D sparse grid.
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
 
-0.5	0.5	
-0.5	0.25	
-0.5	0.75	
-0.5	0.125	
-0.5	0.375	
-0.5	0.625	
-0.5	0.875	
-0.25	0.5	
-0.25	0.25	
-0.25	0.75	
-0.75	0.5	
-0.75	0.25	
-0.75	0.75	
-0.125	0.5	
-0.375	0.5	
-0.625	0.5	
-0.875	0.5	
-
-Coordinates of points in 3D sparse grid.
-
-0.5	0.5	0.5	
-0.5	0.5	0.25	
-0.5	0.5	0.75	
-0.5	0.5	0.125	
-0.5	0.5	0.375	
-0.5	0.5	0.625	
-0.5	0.5	0.875	
-0.5	0.25	0.5	
-0.5	0.25	0.25	
-0.5	0.25	0.75	
-0.5	0.75	0.5	
-0.5	0.75	0.25	
-0.5	0.75	0.75	
-0.5	0.125	0.5	
-0.5	0.375	0.5	
-0.5	0.625	0.5	
-0.5	0.875	0.5	
-0.25	0.5	0.5	
-0.25	0.5	0.25	
-0.25	0.5	0.75	
-0.25	0.25	0.5	
-0.25	0.75	0.5	
-0.75	0.5	0.5	
-0.75	0.5	0.25	
-0.75	0.5	0.75	
-0.75	0.25	0.5	
-0.75	0.75	0.5	
-0.125	0.5	0.5	
-0.375	0.5	0.5	
-0.625	0.5	0.5	
-0.875	0.5	0.5	
+FAILED (errors=2)
